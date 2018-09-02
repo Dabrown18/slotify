@@ -1,8 +1,16 @@
 <?php
-	// Login button
-	if(isset($_POST["loginButton"])) {
-		echo "The login button was pressed!";
-	}
+// Sanitizes user input
+function sanitizeFormString($inputText) {
+	$inputText = strip_tags($inputText); // strip_tag = prevents html elements
+	$inputText = str_replace(" ", "", $inputText); // removes spaces
+	$inputText = ucfirst(strtolower($inputText));
+	return $inputText;
+}
+
+// Login button
+if(isset($_POST["loginButton"])) {
+
+}
 
 ?>
 
