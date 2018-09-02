@@ -12,6 +12,15 @@ if(isset($_POST["loginButton"])) {
 
 }
 
+// Registration button
+if(isset($_POST["registerButton"])) {
+	$username  = sanitizeFormString($_POST["username"]);
+	$firstName = sanitizeFormString($_POST["firstName"]);
+	$lastName  = sanitizeFormString($_POST["lastName"]);
+	$email     = sanitizeFormString($_POST["email"]);
+	$email2    = sanitizeFormString($_POST["email2"]);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -50,32 +59,32 @@ if(isset($_POST["loginButton"])) {
 
 				<p>
 					<label for="firstName">First name</label>
-					<input type="firstName" id="firstName" name="username" placeholder="e.g. Darron" required>
+					<input type="text" id="firstName" name="firstName" placeholder="e.g. Darron" required>
 				</p>
 
 				<p>
 					<label for="lastName">Last name</label>
-					<input type="lastName" id="lastName" name="username" placeholder="e.g. Brown" required>
+					<input type="text" id="lastName" name="lastName" placeholder="e.g. Brown" required>
 				</p>
 
 				<p>
 					<label for="email">Email</label>
-					<input type="email" id="email" name="username" placeholder="e.g. DaBrown18@email.com" required>
+					<input type="email" id="email" name="email" placeholder="e.g. DaBrown18@email.com" required>
 				</p>
 
 				<p>
 					<label for="email2">Confirm Email</label>
-					<input type="email2" id="email2" name="username" placeholder="e.g. DaBrown18@email.com" required>
+					<input type="email" id="email2" name="email2" placeholder="e.g. DaBrown18@email.com" required>
 				</p>
 
 				<p>
 					<label for="password">Password</label>
-					<input type="password" id="password" name="loginPassword" placeholder="Your password" required>
+					<input type="password" id="password" name="password" placeholder="Your password" required>
 				</p>
 
 				<p>
 					<label for="password2">Confirm password</label>
-					<input type="password2" id="password2" name="loginPassword" placeholder="Your password" required>
+					<input type="password" id="password2" name="password2" placeholder="Your password" required>
 				</p>
 				<button type="submit" name="registrationButton">SIGN UP</button>
 			</form>
