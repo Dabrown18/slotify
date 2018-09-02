@@ -1,3 +1,11 @@
+<?php
+	// Login button
+	if(isset($_POST["loginButton"])) {
+		echo "The login button was pressed!";
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
