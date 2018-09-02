@@ -1,37 +1,3 @@
-<?php
-// Sanitizes user input
-function sanitizeFormString($inputText) {
-	$inputText = strip_tags($inputText); // strip_tag = prevents html elements
-	$inputText = str_replace(" ", "", $inputText); // removes spaces
-	$inputText = ucfirst(strtolower($inputText));
-	return $inputText;
-}
-
-// Sanitizes password
-function sanitizeFormPassword($inputText) {
-	$inputText = strip_tags($inputText); // strip_tag = prevents html elements
-	$inputText = ucfirst(strtolower($inputText));
-	return $inputText;
-}
-
-// Login button
-if(isset($_POST["loginButton"])) {
-
-}
-
-// Registration button
-if(isset($_POST["registerButton"])) {
-	$username  = sanitizeFormString($_POST["username"]);
-	$firstName = sanitizeFormString($_POST["firstName"]);
-	$lastName  = sanitizeFormString($_POST["lastName"]);
-	$email     = sanitizeFormString($_POST["email"]);
-	$email2    = sanitizeFormString($_POST["email2"]);
-	$password  = sanitizeFormPassword($_POST["password"]);
-	$password2 = sanitizeFormPassword($_POST["password2"]);
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
