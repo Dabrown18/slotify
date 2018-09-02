@@ -12,7 +12,7 @@ include("includes/handlers/login-handler.php");
 		<meta name="description" content="">
 		<link rel="apple-touch-icon" href="">
 		<link rel="icon" type="image/png" href="">
-		<title></title>
+		<title>Slotify</title>
 	</head>
 	<body>
 		<div id="input_container">
