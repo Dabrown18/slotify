@@ -50,11 +50,21 @@ if(isset($_POST["registerButton"])) {
 				<h2>Login to your account</h2>
 				<p>
 					<label for="loginUsername">Username</label>
-					<input type="text" id="loginUsername" name="loginUsername" placeholder="e.g. DaBrown18" required>
+					<input
+						type="text"
+						id="loginUsername"
+						name="loginUsername"
+						placeholder="e.g. DaBrown18"
+						required>
 				</p>
 				<p>
 					<label for="loginPassword">Password</label>
-					<input type="password" id="loginPassword" name="loginPassword" placeholder="Your password" required>
+					<input
+						type="password"
+						id="loginPassword"
+						name="loginPassword"
+						placeholder="Your password"
+						required>
 				</p>
 				<button type="submit" name="loginButton">LOG IN</button>
 			</form>
@@ -63,37 +73,71 @@ if(isset($_POST["registerButton"])) {
 				<h2>Create your free account</h2>
 				<p>
 					<label for="username">Username</label>
-					<input type="text" id="username" name="username" placeholder="e.g. DaBrown18" required>
+					<input
+						type="text"
+						id="username"
+						name="username"
+						placeholder="e.g. DaBrown18"
+						required>
 				</p>
 
 				<p>
 					<label for="firstName">First name</label>
-					<input type="text" id="firstName" name="firstName" placeholder="e.g. Darron" required>
+					<input
+						type="text"
+						id="firstName"
+						name="firstName"
+						placeholder="e.g. Darron"
+						required>
 				</p>
 
 				<p>
 					<label for="lastName">Last name</label>
-					<input type="text" id="lastName" name="lastName" placeholder="e.g. Brown" required>
+					<input
+						type="text"
+						id="lastName"
+						name="lastName"
+						placeholder="e.g. Brown"
+						required>
 				</p>
 
 				<p>
 					<label for="email">Email</label>
-					<input type="email" id="email" name="email" placeholder="e.g. DaBrown18@email.com" required>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="e.g. DaBrown18@email.com"
+						required>
 				</p>
 
 				<p>
 					<label for="email2">Confirm Email</label>
-					<input type="email" id="email2" name="email2" placeholder="e.g. DaBrown18@email.com" required>
+					<input
+						type="email"
+						id="email2"
+						name="email2"
+						placeholder="e.g. DaBrown18@email.com" required>
 				</p>
 
 				<p>
 					<label for="password">Password</label>
-					<input type="password" id="password" name="password" placeholder="Your password" required>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Your password"
+						required>
 				</p>
 
 				<p>
 					<label for="password2">Confirm password</label>
-					<input type="password" id="password2" name="password2" placeholder="Your password" required>
+					<input
+						type="password"
+						id="password2"
+						name="password2"
+						placeholder="Your password"
+						required>
 				</p>
 				<button type="submit" name="registrationButton">SIGN UP</button>
 			</form>
