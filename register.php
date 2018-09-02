@@ -20,9 +20,48 @@
 				</p>
 				<p>
 					<label for="loginPassword">Password</label>
-					<input type="password" id="loginPassword" name="loginPassword" required>
+					<input type="password" id="loginPassword" name="loginPassword" placeholder="Your password" required>
 				</p>
 				<button type="submit" name="loginButton">LOG IN</button>
+			</form>
+
+			<form action="register.php" id="loginForm" method="POST">
+				<h2>Create your free account</h2>
+				<p>
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username" placeholder="e.g. DaBrown18" required>
+				</p>
+
+				<p>
+					<label for="firstName">First name</label>
+					<input type="firstName" id="firstName" name="username" placeholder="e.g. Darron" required>
+				</p>
+
+				<p>
+					<label for="lastName">Last name</label>
+					<input type="lastName" id="lastName" name="username" placeholder="e.g. Brown" required>
+				</p>
+
+				<p>
+					<label for="email">Email</label>
+					<input type="email" id="email" name="username" placeholder="e.g. DaBrown18@email.com" required>
+				</p>
+
+				<p>
+					<label for="email2">Confirm Email</label>
+					<input type="email2" id="email2" name="username" placeholder="e.g. DaBrown18@email.com" required>
+				</p>
+
+				<p>
+					<label for="password">Password</label>
+					<input type="password" id="password" name="loginPassword" placeholder="Your password" required>
+				</p>
+
+				<p>
+					<label for="password2">Confirm password</label>
+					<input type="password2" id="password2" name="loginPassword" placeholder="Your password" required>
+				</p>
+				<button type="submit" name="registrationButton">SIGN UP</button>
 			</form>
 		</div>
 	</body>
