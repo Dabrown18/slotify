@@ -8,6 +8,18 @@ class Account {
 		$this->errorArray = array();
 	}
 
+	public function login($un, $pw) {
+		$pw = md5($pw);
+		$query = mysqli_query($this->con, "SELECT * FROM slotify.users WHERE slotify.users.username='$un' AND slotify.users.password='$pw'");
+
+		if(mysqli_num_rows($query) == 1) {
+			return true;
+		} else {
+			array_push($this->errorArray, Constants::$loginFailed);
+			return false;
+		}
+	}
+
 	public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
 		$this->validateUsername($un);
 		$this->validateFirstName($fn);
@@ -72,7 +84,7 @@ class Account {
 	}
 
 	private function validateEmails($em, $em2) {
-		if($em != $em2) {
+		if($em !== $em2) {
 			array_push($this->errorArray, Constants::$emailsDoNotMatch);
 			return;
 		}
@@ -91,7 +103,7 @@ class Account {
 
 	private function validatePasswords($pw, $pw2) {
 
-		if($pw != $pw2) {
+		if($pw !== $pw2) {
 			array_push($this->errorArray, Constants::$passwordsDoNotMatch);
 			return;
 		}
