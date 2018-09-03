@@ -24,11 +24,15 @@ class Account {
 	}
 
 	private function validateFirstName($input) {
-
+		if(strlen($input) > 25 || strlen($input) < 2) {
+			array_push($this->errorArray, "Your first name must be between 2 and 25 characters");
+		}
 	}
 
 	private function validateLastName($input) {
-
+		if(strlen($input) > 25 || strlen($input) < 2) {
+			array_push($this->errorArray, "Your last name must be between 2 and 25 characters");
+		}
 	}
 
 	private function validateEmails($email, $email2) {
