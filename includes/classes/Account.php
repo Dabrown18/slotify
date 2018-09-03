@@ -35,10 +35,10 @@ class Account {
 	private function insertUserDetails($un, $fn, $ln, $em, $pw) {
 		// Password encryption
 		$encryptedPw = md5($pw);
-		$profilePic = "assets/images/profile-pics/head_emerald.png";
-		$date       = date("Y-m-d");
+		$profilePic  = "assets/images/profile-pics/head_emerald.png";
+		$date        = date("Y-m-d");
 
-		$result = mysqli_query($this->con, "INSERT INTO users VALUES ( '', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic' )");
+		$result = mysqli_query($this->con, "INSERT INTO slotify.users VALUES ( '', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic' )");
 		return $result;
 	}
 
@@ -49,8 +49,12 @@ class Account {
 			return;
 		}
 
-		//TODO: check if username exists
-
+		// Check's if username exists
+		$checkUsernameQuery = mysqli_query($this->con, "SELECT slotify.users.username FROM slotify.users WHERE slotify.users.username='$un'");
+		if(mysqli_num_rows($checkUsernameQuery) !== 0) {
+			array_push($this->errorArray, Constants::$usernameTaken);
+			return;
+		}
 	}
 
 	private function validateFirstName($fn) {
@@ -77,9 +81,12 @@ class Account {
 			array_push($this->errorArray, Constants::$emailInvalid);
 			return;
 		}
-
-		//TODO: Check that username hasn't already been used
-
+		// Check's if email exists
+		$checkEmailQuery = mysqli_query($this->con, "SELECT slotify.users.email FROM slotify.users WHERE slotify.users.email='$em'");
+		if(mysqli_num_rows($checkEmailQuery) !== 0) {
+			array_push($this->errorArray, Constants::$emailTaken);
+			return;
+		}
 	}
 
 	private function validatePasswords($pw, $pw2) {
