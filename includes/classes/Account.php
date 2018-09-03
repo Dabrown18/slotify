@@ -50,15 +50,25 @@ class Account {
 			return;
 		}
 
-		// TODO: Check if username hasnt already been used.
+		// TODO: Check if username hasn't already been used.
 	}
 
 	private function validatePasswords($password, $password2) {
+		// Makes sure passwords match
 		if($password !== $password2) {
 			array_push($this->errorArray, "Your passwords do not match");
 			return;
 		}
+		// Password can only contain numbers and letters
+		if(preg_match('/[^A-Za-z0-9]/', $password)) {
+			array_push($this->errorArray, "Your password can only contain numbers and letters");
+			return;
+		}
+		// Checks password length
+		if(strlen($password) > 25 || strlen($password) < 5) {
+			array_push($this->errorArray, "Your last name must be between 5 and 25 characters");
+			return;
+		}
 	}
-
 }
 ?>
