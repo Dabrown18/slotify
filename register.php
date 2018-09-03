@@ -38,6 +38,10 @@ function getInputValue($name) {
 
 						<button type="submit" name="loginButton">LOG IN</button>
 
+						<div class="hasAccountText">
+							<span id="hideLogin">Dont have an account yet? Signup here</span>
+						</div>
+
 					</form>
 
 
@@ -132,6 +136,10 @@ function getInputValue($name) {
 						</p>
 
 						<button type="submit" name="registerButton">SIGN UP</button>
+
+						<div class="hasAccountText">
+							<span id="hideRegister">Already have an account? Log in here.</span>
+						</div>
 
 					</form>
 
