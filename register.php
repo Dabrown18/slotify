@@ -1,6 +1,10 @@
 <?php
-include("includes/handlers/register-handler.php");
-include("includes/handlers/login-handler.php");
+include ("includes/classes/Account.php");
+include ("includes/handlers/register-handler.php");
+include ("includes/handlers/login-handler.php");
+
+$account = new Account();
+$account -> register();
 ?>
 <!DOCTYPE html>
 <html lang="en">
